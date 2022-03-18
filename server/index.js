@@ -21,17 +21,9 @@ const connectDB = async () => {
 
 connectDB();
 
-const corsOptions = {
-  origin: "*",
-  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-  preflightContinue: false,
-  optionsSuccessStatus: 204,
-  allowedHeaders: ["Content-Type"],
-};
-
 const app = express();
-app.use(cors(corsOptions));
 app.use(express.json());
+app.use(cors());
 app.use("/api/auth", authRouter);
 
 app.use("/api/posts", postRouter);

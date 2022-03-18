@@ -1,6 +1,6 @@
 export const apiURL =
   process.env.NODE_ENV !== "production"
-    ? "https://lit-bayou-04176.herokuapp.com/api"
+    ? "http://localhost:5200/api"
     : "Some URL";
 
 export const LOCAL_STORAGE_TOKEN_NAME = "token";
