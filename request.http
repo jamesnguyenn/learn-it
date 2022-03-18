@@ -1,0 +1,52 @@
+#############Create User################
+POST http://localhost:5200/api/auth/register
+content-type: application/json
+
+{
+    "username": "admin4",
+    "password": "admin4"
+}
+
+#############Login################
+POST http://localhost:5200/api/auth/login
+content-type: application/json
+
+{
+    "username": "admin3",
+    "password": "admin3"
+}
+
+###Get All Post###
+GET http://localhost:5200/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2MjMxYjVmNjUzZmY4NzBjN2UwZTM3YWYiLCJpYXQiOjE2NDc1MTQwNjJ9.LJmPlZ7yLf1w0WjRn0WYpPRKfNVU8E7LjV3w940qJ3A
+
+
+###Create New Post###
+POST  http://localhost:5200/api/posts
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2MjMxYmEyMGY2NWI0YzBmYjQwMGY0MTYiLCJpYXQiOjE2NDc0Mjg4Nzd9.Wl8UIy6z6ctAnyHWSjCHrvjw-6ryVlNKBZPOj-pM3rA
+
+{
+    "title": "My second posts",
+    "description": "Shoppe",
+    "url": "https://www.youtube.com/watch?v=rgFd17fyM4A&t=860s&ab_channel=HenryWebDev",
+    "status": "LEARNED"
+}
+
+###Update Post###
+PUT  http://localhost:5200/api/posts/6231c8a838a0269e43821743
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2MjMxYmEyMGY2NWI0YzBmYjQwMGY0MTYiLCJpYXQiOjE2NDc0Mjg4Nzd9.Wl8UIy6z6ctAnyHWSjCHrvjw-6ryVlNKBZPOj-pM3rA
+
+{   
+    "title": "My updated second posts",
+    "description": "Tiki",
+    "url": "https://www.youtube.com/watch?v=rgFd17fyM4A&t=860s&ab_channel=HenryWebDev",
+    "status": "TO LEARNED"
+}
+
+###Delete Post###
+
+DELETE  http://localhost:5200/api/posts/6231c6027c07f279b740e047
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2MjMxYmEyMGY2NWI0YzBmYjQwMGY0MTYiLCJpYXQiOjE2NDc0Mjg4Nzd9.Wl8UIy6z6ctAnyHWSjCHrvjw-6ryVlNKBZPOj-pM3rA
