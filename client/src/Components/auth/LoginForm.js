@@ -29,6 +29,7 @@ function LoginForm() {
     e.preventDefault();
     try {
       const loginData = await loginUser(loginForm);
+      console.log(loginData);
       if (loginData && !loginData.success) {
         setAlert({ type: "danger", message: loginData.message });
         setTimeout(() => {
