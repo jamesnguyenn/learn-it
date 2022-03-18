@@ -43,16 +43,6 @@ function UpdatePostModal() {
     });
   };
 
-  const resetAddPostData = () => {
-    setUpdatedPost({
-      title: "",
-      description: "",
-      url: "",
-      status: "TO LEARN",
-    });
-    setActiveUpdateModal(false);
-  };
-
   return (
     <Modal
       show={activeUpdateModal}

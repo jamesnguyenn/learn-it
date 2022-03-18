@@ -110,7 +110,6 @@ function PostsContextProvider({ children }) {
     deletePost,
     updatePost,
     findPost,
-    activeModal,
     activeUpdateModal,
     setActiveUpdateModal,
   };

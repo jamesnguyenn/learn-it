@@ -8,7 +8,7 @@ function Footer() {
         <a
           href="https://github.com/jamesnguyenn"
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
         >
           <GitHubIcon></GitHubIcon>
         </a>
